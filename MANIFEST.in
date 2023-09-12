@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include commerce *.css
+recursive-include commerce *.csv
+recursive-include commerce *.html
+recursive-include commerce *.ico
+recursive-include commerce *.js
+recursive-include commerce *.json
+recursive-include commerce *.md
+recursive-include commerce *.png
+recursive-include commerce *.py
+recursive-include commerce *.svg
+recursive-include commerce *.txt
+recursive-exclude commerce *.pyc
