@@ -1,0 +1,457 @@
+{
+ "autoname": "SCI.DD.MM.-.YYYY.######",
+ "creation": "2020-07-28 11:44:29.598425",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skip_payment",
+  "platform",
+  "sales_invoice",
+  "xendit_invoice_url",
+  "customer",
+  "user",
+  "price_list",
+  "column_break_8",
+  "company",
+  "posting_date",
+  "note",
+  "item_section",
+  "items",
+  "section_break_5",
+  "total_weight",
+  "rounded_weight",
+  "weight_uom",
+  "total_qty",
+  "column_break_6",
+  "total",
+  "section_break_8",
+  "voucher",
+  "my_voucher",
+  "voucher_code",
+  "column_break_10",
+  "total_discount",
+  "section_break_12",
+  "address",
+  "address_title",
+  "address_line_1",
+  "city",
+  "pincode",
+  "column_break_recipient",
+  "is_default",
+  "recipient_name",
+  "phone",
+  "section_break_26",
+  "courier",
+  "courier_service",
+  "can_cod",
+  "delivery_area",
+  "type_delivery",
+  "eta",
+  "column_break_16",
+  "shipping_fee",
+  "from_territory",
+  "to_territory",
+  "section_break_19",
+  "pay_later",
+  "payment_method",
+  "column_break_18",
+  "payment_fee",
+  "section_break_grand_total",
+  "column_break_23",
+  "grand_total",
+  "sales_person",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Shopping Cart Invoice Item"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Int",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "voucher",
+   "fieldtype": "Link",
+   "label": "Voucher",
+   "options": "Voucher"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "total_discount",
+   "fieldtype": "Currency",
+   "label": "Total Discount"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shipping_fee",
+   "fieldtype": "Currency",
+   "label": "Shipping Fee"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "label": "Payment Method"
+  },
+  {
+   "fieldname": "payment_fee",
+   "fieldtype": "Currency",
+   "label": "Payment Fee"
+  },
+  {
+   "fieldname": "section_break_grand_total",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shopping Cart Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sales_invoice.xendit_invoice_url",
+   "fieldname": "xendit_invoice_url",
+   "fieldtype": "Data",
+   "label": "Xendit Invoice Url",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.address_title",
+   "fieldname": "address_title",
+   "fieldtype": "Data",
+   "label": "Address Title",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.address_line1",
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.pincode",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode (Postal Code)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.recipient_name",
+   "fieldname": "recipient_name",
+   "fieldtype": "Data",
+   "label": "Recipient Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "address.phone",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_recipient",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "address.is_default",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_uom",
+   "fieldtype": "Link",
+   "label": "Weight UOM",
+   "options": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rounded_weight",
+   "fieldtype": "Int",
+   "label": "Rounded Weight",
+   "read_only": 1
+  },
+  {
+   "default": "Website",
+   "fieldname": "platform",
+   "fieldtype": "Select",
+   "label": "Platform",
+   "options": "Website\nApplication"
+  },
+  {
+   "fieldname": "my_voucher",
+   "fieldtype": "Link",
+   "label": "My Voucher",
+   "options": "My Voucher"
+  },
+  {
+   "fieldname": "voucher_code",
+   "fieldtype": "Data",
+   "label": "Voucher Code"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Price List",
+   "options": "Price List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_area",
+   "fieldtype": "Link",
+   "label": "Delivery Area",
+   "options": "Delivery Area"
+  },
+  {
+   "fetch_from": "delivery_area.type",
+   "fieldname": "type_delivery",
+   "fieldtype": "Data",
+   "label": "Type Delivery",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_territory",
+   "fieldtype": "Data",
+   "label": "From Territory"
+  },
+  {
+   "fieldname": "to_territory",
+   "fieldtype": "Data",
+   "label": "To Territory"
+  },
+  {
+   "fieldname": "courier",
+   "fieldtype": "Data",
+   "label": "Courier"
+  },
+  {
+   "fieldname": "courier_service",
+   "fieldtype": "Data",
+   "label": "Courier Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_later",
+   "fieldtype": "Check",
+   "label": "Pay Later"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_cod",
+   "fieldtype": "Check",
+   "label": "Can COD"
+  },
+  {
+   "fieldname": "eta",
+   "fieldtype": "Small Text",
+   "label": "Eta",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "skip_payment",
+   "fieldtype": "Check",
+   "label": "Skip Payment"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-04-22 13:57:02.708670",
+ "modified_by": "dev@wss.com",
+ "module": "Commerce",
+ "name": "Shopping Cart Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Shopping Cart Invoice Customer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Shopping Cart Invoice Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

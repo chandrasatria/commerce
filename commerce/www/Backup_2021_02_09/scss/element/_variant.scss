@@ -1,0 +1,36 @@
+/* SCSS for variant color in product detail */
+
+.variant-box {
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#variantImage {
+    border-radius: 5px;
+}
+
+.variant_active {
+    border: 2px solid $secondary_color;
+}
+
+.variant_non_active {
+    border: 1px solid $grey;
+}
+
+.variant_title {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 2px 6px 4px 6px;
+    font-size: 10px;
+    color: white;
+    background-color: $secondary_color;
+    border-radius: 5px;
+    z-index: 11;
+    position: relative;
+    line-height: 1;
+    font-weight: bold;
+}

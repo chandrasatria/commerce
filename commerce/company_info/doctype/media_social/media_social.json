@@ -1,0 +1,105 @@
+{
+ "creation": "2020-08-18 15:35:07.425219",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "facebook_section_section",
+  "facebook_url",
+  "facebook_logo",
+  "instagram_section",
+  "instagram_url",
+  "instagram_logo",
+  "twitter_section",
+  "twitter_url",
+  "twitter_logo",
+  "youtube_section",
+  "youtube_url",
+  "youtube_logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "facebook_section_section",
+   "fieldtype": "Section Break",
+   "label": "Facebook Section"
+  },
+  {
+   "fieldname": "facebook_logo",
+   "fieldtype": "Attach Image",
+   "label": "Facebook Logo"
+  },
+  {
+   "fieldname": "instagram_section",
+   "fieldtype": "Section Break",
+   "label": "Instagram Section"
+  },
+  {
+   "fieldname": "instagram_logo",
+   "fieldtype": "Attach Image",
+   "label": "Instagram Logo"
+  },
+  {
+   "fieldname": "twitter_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Twitter Section"
+  },
+  {
+   "fieldname": "twitter_logo",
+   "fieldtype": "Attach Image",
+   "label": "Twitter Logo"
+  },
+  {
+   "fieldname": "youtube_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Youtube Section"
+  },
+  {
+   "fieldname": "youtube_logo",
+   "fieldtype": "Attach Image",
+   "label": "Youtube Logo"
+  },
+  {
+   "fieldname": "facebook_url",
+   "fieldtype": "Long Text",
+   "label": "Facebook Url"
+  },
+  {
+   "fieldname": "instagram_url",
+   "fieldtype": "Long Text",
+   "label": "Instagram Url"
+  },
+  {
+   "fieldname": "twitter_url",
+   "fieldtype": "Long Text",
+   "label": "Twitter Url"
+  },
+  {
+   "fieldname": "youtube_url",
+   "fieldtype": "Long Text",
+   "label": "Youtube Url"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2021-03-29 14:15:24.767747",
+ "modified_by": "Administrator",
+ "module": "Company Info",
+ "name": "Media Social",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

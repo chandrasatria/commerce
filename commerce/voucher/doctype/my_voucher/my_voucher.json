@@ -1,0 +1,151 @@
+{
+    "autoname": "format:V-{voucher}-{######}",
+    "creation": "2019-12-10 11:34:45.084723",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "using_system",
+     "voucher",
+     "voucher_detail_section",
+     "start_date",
+     "end_date",
+     "section_break_5",
+     "customer",
+     "customer_name",
+     "voucher_status_section",
+     "voucher_code",
+     "status",
+     "claimed_on",
+     "applied_on",
+     "voucher_id"
+    ],
+    "fields": [
+     {
+      "fieldname": "voucher",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Voucher",
+      "options": "Voucher",
+      "read_only": 1,
+      "reqd": 1
+     },
+     {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Customer",
+      "options": "Customer",
+      "read_only": 1,
+      "reqd": 1
+     },
+     {
+      "description": "Claimed = User claim the voucher<br>\nApplied = User use the voucher<br>\nExpire = User can no longer use the voucher<br>",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Claimed\nApplied\nExpired",
+      "read_only": 1
+     },
+     {
+      "fieldname": "claimed_on",
+      "fieldtype": "Datetime",
+      "label": "Claimed On",
+      "read_only": 1
+     },
+     {
+      "fieldname": "applied_on",
+      "fieldtype": "Datetime",
+      "label": "Applied On",
+      "read_only": 1
+     },
+     {
+      "fieldname": "voucher_id",
+      "fieldtype": "Data",
+      "label": "Voucher ID",
+      "read_only": 1,
+      "unique": 1
+     },
+     {
+      "fieldname": "voucher_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Voucher Code",
+      "set_only_once": 1
+     },
+     {
+      "fieldname": "voucher_detail_section",
+      "fieldtype": "Section Break",
+      "label": "Voucher Detail"
+     },
+     {
+      "fetch_from": "voucher.start_date",
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "read_only": 1
+     },
+     {
+      "fetch_from": "voucher.end_date",
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date",
+      "read_only": 1
+     },
+     {
+      "fieldname": "section_break_5",
+      "fieldtype": "Section Break"
+     },
+     {
+      "default": "0",
+      "fieldname": "using_system",
+      "fieldtype": "Check",
+      "label": "Using System",
+      "read_only": 1
+     },
+     {
+      "fetch_from": "customer.customer_name",
+      "fieldname": "customer_name",
+      "fieldtype": "Data",
+      "label": "Customer Name",
+      "read_only": 1
+     },
+     {
+      "fieldname": "voucher_status_section",
+      "fieldtype": "Section Break",
+      "label": "Voucher Status"
+     }
+    ],
+    "modified": "2020-06-19 11:02:47.593209",
+    "modified_by": "Administrator",
+    "module": "Voucher",
+    "name": "My Voucher",
+    "owner": "Administrator",
+    "permissions": [
+     {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+     },
+     {
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "role": "Customer",
+      "write": 1
+     }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+   }

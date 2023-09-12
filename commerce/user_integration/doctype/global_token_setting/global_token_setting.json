@@ -1,0 +1,56 @@
+{
+ "creation": "2020-03-26 12:24:29.101148",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "token"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Token",
+   "reqd": 1
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-03-26 12:25:22.952530",
+ "modified_by": "Administrator",
+ "module": "User Integration",
+ "name": "Global Token Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Global Token Read Only",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

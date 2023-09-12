@@ -1,0 +1,38 @@
+{
+ "creation": "2020-07-28 08:51:09.955126",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Item Name"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-28 11:11:35.442788",
+ "modified_by": "Administrator",
+ "module": "Voucher",
+ "name": "Voucher Item Based Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

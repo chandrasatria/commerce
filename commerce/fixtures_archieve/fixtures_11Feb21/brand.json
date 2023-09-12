@@ -1,0 +1,38 @@
+[
+ {
+  "brand": "Tidak Ada Merk",
+  "brand_defaults": [],
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Brand",
+  "modified": "2021-02-06 10:24:09.024306",
+  "name": "Tidak Ada Merk",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "brand": "Others",
+  "brand_defaults": [],
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Brand",
+  "modified": "2021-02-10 12:42:40.997586",
+  "name": "Others",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "brand": "WSS",
+  "brand_defaults": [],
+  "description": null,
+  "docstatus": 0,
+  "doctype": "Brand",
+  "modified": "2021-01-11 13:22:08.405345",
+  "name": "WSS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

@@ -1,0 +1,30 @@
+{
+ "creation": "2020-07-28 08:53:03.605729",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "brand"
+ ],
+ "fields": [
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Brand",
+   "options": "Brand",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-28 11:11:50.636245",
+ "modified_by": "Administrator",
+ "module": "Voucher",
+ "name": "Voucher Brand Based Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

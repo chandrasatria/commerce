@@ -1,0 +1,84 @@
+/* 28. instagram css here */
+
+.instagram-item {
+	position: relative;
+    &:hover{
+        &::before{
+            opacity: 0.5;
+        }
+        & .instagram-hvr-content{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        top: 0;
+        left: 0;
+        transition: .3s;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.instagram-hvr-content {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	left: 0;
+	right: 0;
+	text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    & span{
+        margin-right: 7px;
+        font-size: 16px;
+        color: #fff;
+        &:last-child{
+            margin-right: 0;
+        }
+        & i{
+            margin-right: 7px;
+        }
+    }
+}
+
+.shop-product__variation-image{
+    & .section_title{
+        & h2{
+            @media #{$large-mobile}{
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+.instagram-wrap{
+    & button{
+        position: absolute;
+        top: -53px;
+        right: 0;
+        font-size: 27px;
+        border: 0;
+        background: #fff;
+        color: #a9a9a9;
+        &:hover{
+            color: #ffd54c;
+        }
+        @media #{$large-mobile}{
+            top: -42px;
+            font-size: 24px;
+        }
+        &.prev_arrow{
+            margin-right: 28px;
+            @media #{$large-mobile}{
+                margin-right: 23px;
+            }
+        }
+    }
+    
+}

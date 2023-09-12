@@ -1,0 +1,48 @@
+{
+ "creation": "2020-08-03 08:26:23.989124",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "attached_on",
+  "image",
+  "document_to",
+  "document_name"
+ ],
+ "fields": [
+  {
+   "default": "now",
+   "fieldname": "attached_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attached On"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "document_to",
+   "fieldtype": "Select",
+   "label": "Document To",
+   "options": "Blog Post"
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Document Name",
+   "options": "document_to"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-20 11:57:03.837489",
+ "modified_by": "dev@wss.com",
+ "module": "Commerce",
+ "name": "Banner Our Product",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

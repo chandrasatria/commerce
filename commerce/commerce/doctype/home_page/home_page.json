@@ -1,0 +1,72 @@
+{
+ "creation": "2020-06-24 10:58:57.217938",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "carousel_banner_table",
+  "banner_our_product",
+  "banner_top_seller",
+  "banner_top_seller_document_to",
+  "banner_top_seller_document_name",
+  "banner_last_view"
+ ],
+ "fields": [
+  {
+   "fieldname": "carousel_banner_table",
+   "fieldtype": "Table",
+   "label": "Carousel Banner Table",
+   "options": "Carousel Banner"
+  },
+  {
+   "fieldname": "banner_our_product",
+   "fieldtype": "Table",
+   "label": "Banner Our Product",
+   "options": "Banner Our Product"
+  },
+  {
+   "fieldname": "banner_top_seller",
+   "fieldtype": "Attach Image",
+   "label": "Banner Top Seller"
+  },
+  {
+   "fieldname": "banner_last_view",
+   "fieldtype": "Table",
+   "label": "Banner Last View",
+   "options": "Banner Last View"
+  },
+  {
+   "fieldname": "banner_top_seller_document_to",
+   "fieldtype": "Select",
+   "label": "Banner Top Seller Document To",
+   "options": "Blog Post"
+  },
+  {
+   "fieldname": "banner_top_seller_document_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Banner Top Seller Document Name",
+   "options": "banner_top_seller_document_to"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2021-04-20 12:02:11.175786",
+ "modified_by": "dev@wss.com",
+ "module": "Commerce",
+ "name": "Home Page",
+ "owner": "api@commerce.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,63 @@
+{
+ "creation": "2020-07-30 11:35:43.344200",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_invoice_section",
+  "admin_fee_account",
+  "shipping_fee_account",
+  "section_break_3",
+  "mantain_stock_default"
+ ],
+ "fields": [
+  {
+   "fieldname": "admin_fee_account",
+   "fieldtype": "Link",
+   "label": "Admin Fee Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "shipping_fee_account",
+   "fieldtype": "Link",
+   "label": "Shipping Fee Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "mantain_stock_default",
+   "fieldtype": "Check",
+   "label": "Mantain Stock Default"
+  },
+  {
+   "fieldname": "sales_invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Invoice"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2021-01-12 15:18:24.016349",
+ "modified_by": "Administrator",
+ "module": "Commerce",
+ "name": "Invoice Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

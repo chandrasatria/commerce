@@ -1,0 +1,78 @@
+{
+ "creation": "2020-09-16 08:49:59.685125",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "email_section_section",
+  "confirmation_email_expire",
+  "confirmation_doctype_update",
+  "confirmation_field_lookup",
+  "confirmation_field_update",
+  "phone_section_section"
+ ],
+ "fields": [
+  {
+   "description": "How many hours and minute the email will expire.<br>\nBerapa jam dan menit email akan kadaluwarsa. \n",
+   "fieldname": "confirmation_email_expire",
+   "fieldtype": "Time",
+   "label": "Confirmation Email Expire"
+  },
+  {
+   "description": "Related DocType that stored verfication email <br>\nDocType terkait yang menyimpan email terverivikasi",
+   "fieldname": "confirmation_doctype_update",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Confirmation Doctype Update",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "description": "Related Field that stored verfication email <br>\nKolom terkait yang menyimpan email terverivikasi\n",
+   "fieldname": "confirmation_field_update",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Confirmation Field Update",
+   "reqd": 1
+  },
+  {
+   "description": "The corresponding column to lookup the <b> email </b> value \n(used as a parameter) <br>\nKolom terkait yang digunakan untuk melihat value <b> email </b> (digunakan sebagai parameter)\n",
+   "fieldname": "confirmation_field_lookup",
+   "fieldtype": "Data",
+   "label": "Confirmation Field Lookup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_section_section",
+   "fieldtype": "Section Break",
+   "label": "Email Section"
+  },
+  {
+   "fieldname": "phone_section_section",
+   "fieldtype": "Section Break",
+   "label": "Phone Section"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-09-16 09:28:04.543514",
+ "modified_by": "Administrator",
+ "module": "Confirmation Account",
+ "name": "Confirmation Account Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,435 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:voucher_title",
+ "creation": "2019-12-09 22:04:29.914693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "voucher_type",
+  "voucher_customer_group_table",
+  "voucher_id",
+  "voucher_title",
+  "voucher_claim_type",
+  "voucher_order",
+  "voucher_image",
+  "voucher_code",
+  "internal_voucher_section",
+  "min_amt",
+  "max_amt",
+  "pricing_rule",
+  "voucher_detail_section",
+  "discount_type",
+  "discount_amount",
+  "discount_percentage",
+  "maximal_discount",
+  "based_on",
+  "voucher_item_based_child",
+  "voucher_item_group_based_child",
+  "voucher_brand_based_child",
+  "external_voucher_section",
+  "detail_voucher_section",
+  "term_and_condition",
+  "description_term_and_condition",
+  "rule_section",
+  "start_date",
+  "publish_start_date",
+  "column_break_date",
+  "end_date",
+  "publish_end_date",
+  "claimable_time_section",
+  "start_time",
+  "end_time",
+  "redeem_section_section",
+  "quota_type",
+  "quota_amount",
+  "maximum_voucher_quota",
+  "voucher_left",
+  "voucher_claimed",
+  "next_code",
+  "voucher_next_id",
+  "batch_code",
+  "prefix",
+  "add_random_voucher",
+  "used_code",
+  "qrcode_barcode_section",
+  "qr_code",
+  "column_break_qrcode",
+  "barcode"
+ ],
+ "fields": [
+  {
+   "fieldname": "voucher_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Voucher ID"
+  },
+  {
+   "fieldname": "voucher_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Voucher Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Promo Voucher not claimable, but can directly use in Transaction <br>\nMy Voucher claimable, but must use voucher to user in Transaction",
+   "fieldname": "voucher_claim_type",
+   "fieldtype": "Select",
+   "label": "Voucher Claim Type",
+   "options": "Promo Voucher\nMy Voucher",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "description": "Can be sorted by this value.",
+   "fieldname": "voucher_order",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Voucher Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "voucher_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Voucher Image"
+  },
+  {
+   "description": "If Customer wants to apply the voucher <br>\nEmpty this field if customers can't search the voucher.",
+   "fetch_from": "voucher_title",
+   "fieldname": "voucher_code",
+   "fieldtype": "Data",
+   "label": "Voucher Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "All",
+   "fieldname": "voucher_type",
+   "fieldtype": "Select",
+   "label": "Voucher Type",
+   "options": "All\nCustomer Groups"
+  },
+  {
+   "fieldname": "internal_voucher_section",
+   "fieldtype": "Section Break",
+   "label": "Internal Voucher"
+  },
+  {
+   "bold": 1,
+   "description": "Minimum total pembelanjaan dalam satu cart.",
+   "fieldname": "min_amt",
+   "fieldtype": "Currency",
+   "label": "Min Amt"
+  },
+  {
+   "bold": 1,
+   "description": "Maximum total pembelanjaan dalam satu cart. Isi 0 jika tidak ada limitasi maximum pembelanjaan.",
+   "fieldname": "max_amt",
+   "fieldtype": "Currency",
+   "label": "Max Amt"
+  },
+  {
+   "bold": 1,
+   "description": "Please set up price discount in <b>Pricing Rule</b>",
+   "fieldname": "pricing_rule",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Pricing Rule",
+   "options": "Pricing Rule"
+  },
+  {
+   "fieldname": "voucher_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Voucher Detail"
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Select",
+   "label": "Based On",
+   "options": "All Item\nItem\nBrand\nItem Group"
+  },
+  {
+   "depends_on": "eval:doc.based_on == \"Item\"",
+   "fieldname": "voucher_item_based_child",
+   "fieldtype": "Table",
+   "label": "Voucher Item Based Child",
+   "options": "Voucher Item Based Child"
+  },
+  {
+   "depends_on": "eval:doc.based_on == \"Item Group\"",
+   "fieldname": "voucher_item_group_based_child",
+   "fieldtype": "Table",
+   "label": "Voucher Item Group Based Child",
+   "options": "Voucher Item Group Based Child"
+  },
+  {
+   "depends_on": "eval:doc.based_on == \"Brand\"",
+   "fieldname": "voucher_brand_based_child",
+   "fieldtype": "Table",
+   "label": "Voucher Brand Based Child",
+   "options": "Voucher Brand Based Child"
+  },
+  {
+   "fieldname": "external_voucher_section",
+   "fieldtype": "Section Break",
+   "label": "External Voucher"
+  },
+  {
+   "fieldname": "detail_voucher_section",
+   "fieldtype": "Section Break",
+   "label": "Detail Voucher"
+  },
+  {
+   "fieldname": "description_term_and_condition",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "rule_section",
+   "fieldtype": "Section Break",
+   "label": "Voucher Time Rule"
+  },
+  {
+   "description": "Start Date is date for Voucher can be used for User",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "description": "Publish Date is date for Voucher shown to User",
+   "fieldname": "publish_start_date",
+   "fieldtype": "Date",
+   "label": "Publish Start Date"
+  },
+  {
+   "fieldname": "column_break_date",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "End Date is date for Voucher can be used for User",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "description": "Publish Date is date for Voucher shown to User",
+   "fieldname": "publish_end_date",
+   "fieldtype": "Date",
+   "label": "Publish End Date"
+  },
+  {
+   "collapsible": 1,
+   "description": "Time Range When User can Claimed this Voucher",
+   "fieldname": "claimable_time_section",
+   "fieldtype": "Section Break",
+   "label": "Claimable Time"
+  },
+  {
+   "default": "00:00:00",
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "default": "23:59:59",
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "redeem_section_section",
+   "fieldtype": "Section Break",
+   "label": "Voucher Amount"
+  },
+  {
+   "fieldname": "quota_type",
+   "fieldtype": "Select",
+   "label": "Quota Type",
+   "options": "Once\nDaily\nMonthly"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.quota_type == \"Daily\" || \ndoc.quota_type == \"Monthly\"",
+   "description": "Maximum redemption per period.<br>\nExample: <br>\nQuota Type - Monthly - 2. Then total customer can 2 voucher in April and 2 voucher again in Maret ( according length of promo)\n\n",
+   "fieldname": "quota_amount",
+   "fieldtype": "Data",
+   "label": "Quota Amount"
+  },
+  {
+   "fieldname": "maximum_voucher_quota",
+   "fieldtype": "Int",
+   "label": "Maximum Voucher Quota",
+   "read_only": 1
+  },
+  {
+   "fieldname": "voucher_left",
+   "fieldtype": "Int",
+   "label": "Voucher Left",
+   "read_only": 1
+  },
+  {
+   "fieldname": "voucher_claimed",
+   "fieldtype": "Int",
+   "label": "Voucher Claimed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_code",
+   "fieldtype": "Data",
+   "label": "Next Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "voucher_next_id",
+   "fieldtype": "Data",
+   "label": "Voucher Next ID",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "description": "Each Code must be separate by Enter or ,",
+   "fieldname": "batch_code",
+   "fieldtype": "Long Text",
+   "label": "Batch Code"
+  },
+  {
+   "fieldname": "prefix",
+   "fieldtype": "Data",
+   "label": "Prefix",
+   "read_only": 1
+  },
+  {
+   "fieldname": "add_random_voucher",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Random Voucher"
+  },
+  {
+   "fieldname": "used_code",
+   "fieldtype": "Long Text",
+   "label": "Used Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qrcode_barcode_section",
+   "fieldtype": "Section Break",
+   "label": "Qrcode Barcode"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Attach Image",
+   "label": "Qr Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qrcode",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Attach Image",
+   "label": "Barcode",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.discount_type == \"Discount Percentage\"",
+   "fieldname": "discount_percentage",
+   "fieldtype": "Percent",
+   "label": "Discount Percentage"
+  },
+  {
+   "description": "Fill 0 to set this value as unlimited. And the maximum discount is charged per shopping cart <br> \nIsi 0 untuk menjadikan unlimited. Dan Maksimal dikson dikenakan per keranjang belanja",
+   "fieldname": "maximal_discount",
+   "fieldtype": "Currency",
+   "label": "Maximal Discount"
+  },
+  {
+   "description": "Discount yang dikenakan terhadap item. <br>\n(Discount amount = potongan flat)\n(Discount percentage = persentase dari item yang terkena)",
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "label": "Discount Type",
+   "options": "Discount Amount\nDiscount Percentage",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.discount_type == \"Discount Amount\"",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "term_and_condition",
+   "fieldtype": "Text Editor",
+   "label": "Term and Condition"
+  },
+  {
+   "fieldname": "voucher_customer_group_table",
+   "fieldtype": "Table",
+   "label": "Voucher Customer Group Table",
+   "options": "Voucher Customer Group"
+  }
+ ],
+ "image_field": "voucher_image",
+ "modified": "2021-02-23 10:30:37.993984",
+ "modified_by": "dev@wss.com",
+ "module": "Voucher",
+ "name": "Voucher",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Voucher Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Voucher Customer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,73 @@
+{
+ "autoname": "RSPChange-.YYYY.-.MM.-.######.",
+ "creation": "2021-01-22 10:20:30.613875",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "user",
+  "reason",
+  "reason_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "reason_description",
+   "fieldtype": "Long Text",
+   "label": "Reason Description"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "bold": 1,
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  }
+ ],
+ "modified": "2021-02-03 14:32:12.121868",
+ "modified_by": "Administrator",
+ "module": "Commerce Sales",
+ "name": "Request Sales Person Change",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

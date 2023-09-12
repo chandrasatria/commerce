@@ -1,0 +1,189 @@
+{
+ "autoname": "field:title",
+ "creation": "2020-07-09 09:38:13.091939",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "show_on_homepage",
+  "title",
+  "valid_from",
+  "column_break_3",
+  "valid_till",
+  "quantity",
+  "discount_section",
+  "discount_type",
+  "discount_percentage_or_amount",
+  "maximal_discount",
+  "flash_sale_rule_section",
+  "apply_for_application",
+  "apply_for_website",
+  "section_break_13",
+  "flash_sale_maximum_per_item",
+  "flash_sale_maximum_per_customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Datetime",
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Datetime",
+   "label": "Valid Till",
+   "reqd": 1
+  },
+  {
+   "description": "Total quantity yang dijual di Shopping Cart Invoice. <br>\n<small>lihat codingan check_flash_sale</small>",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "discount_section",
+   "fieldtype": "Section Break",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "discount_type",
+   "fieldtype": "Select",
+   "label": "Discount Type",
+   "options": "Discount Percentage\nDiscount Amount\nOverride",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "discount_percentage_or_amount",
+   "fieldtype": "Int",
+   "label": "Discount Percentage or Amount"
+  },
+  {
+   "depends_on": "eval: doc.discount_type == \"Discount Percentage\"",
+   "fieldname": "maximal_discount",
+   "fieldtype": "Int",
+   "label": "Maximal Discount"
+  },
+  {
+   "fieldname": "flash_sale_rule_section",
+   "fieldtype": "Section Break",
+   "label": "Flash Sale Rule"
+  },
+  {
+   "default": "1",
+   "description": "Jika dicentang, pengguna yang menggunakkan aplikasi bisa mendapatkan flash sale ini. <br>\nIf checked, customer who use the Application for transaction can acquire this flash sale.",
+   "fieldname": "apply_for_application",
+   "fieldtype": "Check",
+   "label": "Apply for Application"
+  },
+  {
+   "default": "1",
+   "description": "Jika dicentang, pengguna yang menggunakkan website bisa mendapatkan flash sale ini. <br>\nIf checked, customer who use the Website for transaction can acquire this flash sale.",
+   "fieldname": "apply_for_website",
+   "fieldtype": "Check",
+   "label": "Apply for Website"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "default": "1",
+   "description": "Maximal pembelian per barang (yang dikenakan Flash Sale ini) per Customer.",
+   "fieldname": "flash_sale_maximum_per_item",
+   "fieldtype": "Int",
+   "label": "Flash Sale Maximum per Item"
+  },
+  {
+   "bold": 1,
+   "default": "1",
+   "description": "Maksimal banyaknya pembelian yang dilakukan Customer(yang dikenakan Flash Sale ini)",
+   "fieldname": "flash_sale_maximum_per_customer",
+   "fieldtype": "Int",
+   "label": "Flash Sale Maximum Transaction per Customer"
+  },
+  {
+   "default": "1",
+   "description": "When checked, application/website will show list of this Flash Sale product in the homepage.<br>\nKeitka dicentang, aplikasi dan web akan menampilkan product Flash Sale yang ada di homepage.",
+   "fieldname": "show_on_homepage",
+   "fieldtype": "Check",
+   "label": "Show On Homepage"
+  }
+ ],
+ "modified": "2021-02-23 10:21:57.718535",
+ "modified_by": "dev@wss.com",
+ "module": "Commerce",
+ "name": "Flash Sale",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flash Sale Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flash Sale Customer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

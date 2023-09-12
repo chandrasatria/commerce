@@ -1,0 +1,20 @@
+-- Permission yang perlu di setup --
+**note: ini in case fixtures ada masalah
+
+customer -> address
+customer -> brand
+customer -> submit Sales Invoice
+customer -> submit Shopping Cart Invoice
+customer -> Xendit Invoice
+            Xendit Log
+            Xendit Setting
+            Xendit Callback
+guest -> account (read)
+customer -> jne origin
+customer -> Xendit payment methods (read)
+customer -> user (write,read)
+customer -> Sales Invoice (write) -> approve barang telah sampai
+customer -> JNE Destination
+customer -> Log Document View
+
+UOM -> Kilogram

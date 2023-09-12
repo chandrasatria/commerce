@@ -1,0 +1,128 @@
+[
+    {
+     "docstatus": 0,
+     "doctype": "Role Profile",
+     "modified": "2021-02-23 12:13:50.630812",
+     "name": "API",
+     "parent": null,
+     "parentfield": null,
+     "parenttype": null,
+     "role_profile": "API",
+     "roles": [
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Accounts Manager"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Super Admin"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Sales User"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Blogger"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Analytics"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Admin User Notification"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Customer"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Shopping Cart Invoice Customer"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Voucher Customer"
+      },
+      {
+       "parent": "API",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Shopping Cart Customer"
+      }
+     ]
+    },
+    {
+     "docstatus": 0,
+     "doctype": "Role Profile",
+     "modified": "2021-02-23 12:13:36.129512",
+     "name": "Customer",
+     "parent": null,
+     "parentfield": null,
+     "parenttype": null,
+     "role_profile": "Customer",
+     "roles": [
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Customer"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "User Inbox"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Delivery Read Only"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Flash Sale Customer"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Shopping Cart Invoice Customer"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Voucher Customer"
+      },
+      {
+       "parent": "Customer",
+       "parentfield": "roles",
+       "parenttype": "Role Profile",
+       "role": "Shopping Cart Customer"
+      }
+     ]
+    }
+   ]

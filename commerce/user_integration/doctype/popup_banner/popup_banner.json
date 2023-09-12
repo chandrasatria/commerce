@@ -1,0 +1,73 @@
+{
+ "autoname": "PB.YYYY.####",
+ "creation": "2020-10-01 09:10:01.866355",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "published",
+  "publish_from",
+  "publish_until",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "default": "1",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Published"
+  },
+  {
+   "fieldname": "publish_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Publish From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "publish_until",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Publish Until",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "modified": "2020-10-01 09:12:05.166531",
+ "modified_by": "Administrator",
+ "module": "User Integration",
+ "name": "Popup Banner",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1
+}

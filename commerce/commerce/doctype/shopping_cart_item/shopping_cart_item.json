@@ -1,0 +1,71 @@
+{
+ "creation": "2020-07-09 16:32:52.995108",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unique_id",
+  "is_selected",
+  "item",
+  "qty",
+  "weight_per_unit",
+  "uom",
+  "conversion_uom"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fetch_from": "item.weight_per_unit",
+   "fieldname": "weight_per_unit",
+   "fieldtype": "Data",
+   "label": "Weight per Unit"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_selected",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Selected"
+  },
+  {
+   "fieldname": "unique_id",
+   "fieldtype": "Data",
+   "label": "Unique Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "conversion_uom",
+   "fieldtype": "Int",
+   "label": "Conversion UOM"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-02-05 11:43:05.873067",
+ "modified_by": "Administrator",
+ "module": "Commerce",
+ "name": "Shopping Cart Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

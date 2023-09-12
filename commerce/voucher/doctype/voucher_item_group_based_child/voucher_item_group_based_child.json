@@ -1,0 +1,30 @@
+{
+ "creation": "2020-07-28 08:52:17.177399",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-28 11:11:42.845779",
+ "modified_by": "Administrator",
+ "module": "Voucher",
+ "name": "Voucher Item Group Based Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

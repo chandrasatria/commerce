@@ -1,0 +1,103 @@
+{
+ "creation": "2020-03-19 13:56:45.761755",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "android_minimum_version",
+  "ios_minimum_version",
+  "section_break_3",
+  "android_play_store_logo",
+  "android_play_store_link",
+  "ios_app_store_logo",
+  "ios_app_store_link",
+  "is_maintenance",
+  "privacy_policy_url",
+  "term_and_conditions_url",
+  "faq_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "android_minimum_version",
+   "fieldtype": "Int",
+   "label": "Android Minimum Version"
+  },
+  {
+   "fieldname": "ios_minimum_version",
+   "fieldtype": "Int",
+   "label": "iOS Minimum Version"
+  },
+  {
+   "default": "0",
+   "description": "If this check, show on apps that apps still maintanance.",
+   "fieldname": "is_maintenance",
+   "fieldtype": "Check",
+   "label": "Is Maintenance"
+  },
+  {
+   "fieldname": "privacy_policy_url",
+   "fieldtype": "Small Text",
+   "label": "Privacy policy URL"
+  },
+  {
+   "fieldname": "term_and_conditions_url",
+   "fieldtype": "Small Text",
+   "label": "Term and conditions URL"
+  },
+  {
+   "fieldname": "faq_url",
+   "fieldtype": "Small Text",
+   "label": "FAQ URL"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ios_app_store_link",
+   "fieldtype": "Small Text",
+   "label": "iOS App Store Link"
+  },
+  {
+   "fieldname": "android_play_store_link",
+   "fieldtype": "Small Text",
+   "label": "Android Play Store Link"
+  },
+  {
+   "fieldname": "android_play_store_logo",
+   "fieldtype": "Attach Image",
+   "label": "Android Play Store Logo"
+  },
+  {
+   "fieldname": "ios_app_store_logo",
+   "fieldtype": "Attach Image",
+   "label": "iOS App Store Logo"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2021-03-29 16:47:53.588471",
+ "modified_by": "dev@wss.com",
+ "module": "User Integration",
+ "name": "App Version",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Customer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

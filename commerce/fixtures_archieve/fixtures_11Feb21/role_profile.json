@@ -1,0 +1,86 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-02-11 17:21:14.922723",
+  "name": "API",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "API",
+  "roles": [
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Super Admin"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Blogger"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Analytics"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Admin User Notification"
+   },
+   {
+    "parent": "API",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2021-02-11 16:58:21.268584",
+  "name": "Customer",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Customer",
+  "roles": [
+   {
+    "parent": "Customer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer"
+   },
+   {
+    "parent": "Customer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "User Inbox"
+   },
+   {
+    "parent": "Customer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Delivery Read Only"
+   }
+  ]
+ }
+]
